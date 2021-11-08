@@ -1,0 +1,60 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| ========= | |
+| \\ / F ield | OpenFOAM: The Open Source CFD Toolbox |
+| \\ / O peration | Version: 2.4.0 |
+| \\ / A nd | Web: www.OpenFOAM.org |
+| \\/ M anipulation | |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+ version 2.0;
+ format ascii;
+ class dictionary;
+ location "system";
+ object controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+application buoyantSimpleFoam;
+startFrom latestTime;
+startTime 0;
+stopAt endTime;
+endTime 2;
+deltaT 0.00001;
+writeControl runTime;
+writeInterval 0.001;
+purgeWrite 0;
+writeFormat ascii;
+writePrecision 9;
+writeCompression off;
+timeFormat general;
+timePrecision 6;
+runTimeModifiable true;
+adjustTimeStep true;
+
+// functions{
+// heatTransferCoeff1
+// {
+//     // Mandatory entries (unmodifiable)
+//     type        heatTransferCoeff;
+//     libs        (fieldFunctionObjects.so);
+
+//     // Mandatory (inherited) entries (runtime modifiable)
+//     field       T;
+//     patches     cylinder;
+//     htcModel    <htcModel>;
+
+//     // Optional entries (runtime modifable)
+//     qr          <qrName>;
+//     L           1.0;
+//     kappa       1.0;
+
+//     // Conditional mandatory and optional
+//     // entries based on selected <htcModel> (runtime modifiable)
+//     ...
+
+//     // Optional (inherited) entries
+//     ...
+// }
+// }
+//maxCo 1;
+ // ************************************************************************* //
