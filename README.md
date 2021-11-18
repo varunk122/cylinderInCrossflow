@@ -1,2 +1,2 @@
 # cylinderInCrossflow
-CHE211 Course Project
+CHE312 Course Project
